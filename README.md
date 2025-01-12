@@ -7,7 +7,7 @@ sudo docker build -t kycuda -f Dockerfile .
 
 dockerfileの実行
 ```bash
-sudo docker run  --gpus all -it -p 8081:8888 kycuda
+sudo docker run  --gpus all -it --rm --mount type=bind,src=$HOME/cuda-tutorial,dst=/root -p 8080:8888 kycuda 
 ```
 
 # コンパイル
